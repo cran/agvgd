@@ -1,7 +1,7 @@
 Package: agvgd
 Type: Package
 Title: An R Implementation of the 'Align-GVGD' Method
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(given = "Ramiro", family = "Magno",
       email = "ramiro.magno@gmail.com",
@@ -27,19 +27,19 @@ Description: 'Align-GVGD' ('A-GVGD') is a method to predict the impact of
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.2
-Imports: crayon, dplyr, grantham, magrittr, rlang, seqinr, stringr,
-        tibble, vctrs
-Suggests: testthat (>= 3.0.0)
+Imports: crayon, dplyr, grantham, magrittr, purrr, rlang, seqinr,
+        stringr, tibble, tidyr, vctrs
+Suggests: covr, testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Depends: R (>= 2.10)
-URL: https://maialab.org/agvgd/
+URL: https://maialab.org/agvgd/, https://github.com/maialab/agvgd
 BugReports: https://github.com/maialab/agvgd/issues
 NeedsCompilation: no
-Packaged: 2022-01-16 18:22:45 UTC; rmagno
+Packaged: 2022-02-03 00:56:32 UTC; rmagno
 Author: Ramiro Magno [aut, cre] (<https://orcid.org/0000-0001-5226-3441>),
   Isabel Duarte [aut] (<https://orcid.org/0000-0003-0060-2936>),
   Ana-Teresa Maia [aut] (<https://orcid.org/0000-0002-0454-9207>),
   CINTESIS [cph, fnd]
 Maintainer: Ramiro Magno <ramiro.magno@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-01-17 19:32:48 UTC
+Date/Publication: 2022-02-03 03:10:02 UTC
