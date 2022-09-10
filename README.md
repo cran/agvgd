@@ -132,6 +132,17 @@ agvgd(alignment = narrow_alignment, poi = poi, sub = all_substitutions)
 #> 20    15    16 L     W      4.86  60.5 C55
 ```
 
+## Disclaimer
+
+The data and information contained herein and in the results of the
+`{agvgd}` package are provided on an *as is* basis and the authors makes
+no representations or warranties, either expressed or implied, as to
+their accuracy, completeness or suitability for a particular purpose.
+Similarly, authors make no representations or warranties with regard to
+the non-infringement of third party proprietary rights. Thus, the
+authors do not accept any responsibility or liability with regard to the
+reliance on, and/or use of, such data and information.
+
 ## Logo
 
 The `{agvgd}` logo, `agvgd.png`, is a derivative work of an illustration
@@ -143,7 +154,7 @@ is licensed under CC-BY-4.0 by Ramiro Magno.
 ## Related software
 
 -   Align-GVGD (A-GVGD) by [Sean
-    Tavtigian](https://uofuhealth.utah.edu/huntsman/labs/tavtigian/),
+    Tavtigian](https://uofuhealth.utah.edu/huntsman/labs/tavtigian),
     provided as a web service and hosted by the [Huntsman Cancer
     Institute](https://healthcare.utah.edu/huntsmancancerinstitute/) at
     <http://agvgd.hci.utah.edu/>.
@@ -152,7 +163,7 @@ is licensed under CC-BY-4.0 by Ramiro Magno.
     Stone](https://bdsi.anu.edu.au/people/professor-eric-stone) that had
     the same ideas as A-GVGD but in a more sophisticated framework. This
     used to be provided as a Java standalone application:
-    <https://biology.anu.edu.au/research/groups/stone-group-quantitative-and-computational-biology/software>;
+    <https://biology.anu.edu.au/research/research-groups/stone-group-quantitative-and-computational-biology/software>;
     however, the download link to MAPP has been down for a long while.
 -   The [grantham](https://cran.r-project.org/package=grantham) package.
 
@@ -182,11 +193,11 @@ with genetic- and molecular-epidemiology applications*. Human Mutation
 29, 1342–1354. doi:
 [10.1002/humu.20896](https://doi.org/10.1002/humu.20896)
 
-<a id="3">3.</a> Grantham, R. *Amino acid difference formula to help
+<a id="4">4.</a> Grantham, R. *Amino acid difference formula to help
 explain protein evolution*. Science 185, 862–864 (1974). doi:
 [10.1126/science.185.4154.862](https://doi.org/10.1126/science.185.4154.862).
 
-<a id="4">4.</a> Stone, E. A., Sidow, Arend. *Physicochemical constraint
+<a id="5">5.</a> Stone, E. A., Sidow, Arend. *Physicochemical constraint
 violation by missense substitutions mediates impairment of protein
 function and disease severity*. Genome Research 15, 978–986 (2005). doi:
 [10.1101/gr.3804205](https://doi.org/10.1101/gr.3804205).

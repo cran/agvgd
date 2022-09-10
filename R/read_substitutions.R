@@ -1,3 +1,18 @@
+#' @keywords internal
+parse_substitutions <- function(x) {
+
+  # Parse the substitutions
+  ref <- substr(x, 1, 1)
+  sub <- substr(x, nchar(x), nchar(x))
+  res <- as.integer(substr(x, 2, nchar(x) - 1))
+
+  # Assemble a data frame with the substitutions
+  tbl <- tibble::tibble(res = res, poi = NA_integer_, ref = ref, sub = sub)
+
+  return(tbl)
+}
+
+
 #' Read a file with amino acid substitutions
 #'
 #' This function reads a file with amino acid substitutions. The format of
@@ -13,11 +28,15 @@
 #'
 #' @examples
 #' # "sub.txt" is an example file containing missense substitutions formatted
-#' # according # to the requirements indicated in http://agvgd.hci.utah.edu/help.php.
+#' # according to the requirements indicated in http://agvgd.hci.utah.edu/help.php.
 #' my_file <- system.file("extdata", "sub.txt", package = "agvgd")
 #' cat(readLines(my_file), sep = "\n")
 #'
 #' read_substitutions(file = my_file)
+#'
+#' # lee2010_sub.txt is a file containing the missense variants studied by
+#' # Lee et al. (2010): https://doi.org/10.1158/0008-5472.CAN-09-4563.
+#' read_substitutions(file = system.file("extdata", "lee2010_sub.txt", package = "agvgd"))
 #'
 #' @md
 #' @importFrom rlang .data
@@ -26,23 +45,20 @@ read_substitutions <-
   function(file = stop('`file` must be specified'),
            amino_acid_code = c('one_letter', 'three_letter')) {
 
-
   # Read in all lines
   lines <- readLines(con = file)
 
   # Remove empty lines
   lines <- lines[lines != '']
 
-  # Parse the substitutions
-  subs <- unlist(strsplit(lines, split = ''))
-
-  m <- matrix(subs, ncol = 3, byrow = TRUE)
-  colnames(m) <- c('from','poi',  'to')
-
-  tbl <- tibble::as_tibble(m) %>%
-    dplyr::mutate(poi = as.integer(.data$poi)) %>%
-    dplyr::relocate(.data$poi, .data$from, .data$to) %>%
-    dplyr::rename(ref = .data$from, sub = .data$to)
+  # # Parse the substitutions
+  # ref <- substr(lines, 1, 1)
+  # sub <- substr(lines, nchar(lines), nchar(lines))
+  # poi <- as.integer(substr(lines, 2, nchar(lines) - 1))
+  #
+  # # Assemble a data frame with the substitutions
+  # tbl <- tibble::tibble(poi = poi, ref = ref, sub = sub)
+  tbl <- parse_substitutions(lines)
 
   amino_acid_code <- match.arg(amino_acid_code)
 
